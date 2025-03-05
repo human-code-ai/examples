@@ -181,7 +181,7 @@ func (h *HumanCodeClient) GenVerificationUrl(sessionId string, humanId string, c
 	// Get the current timestamp in milliseconds.
 	timeStamp := time.Now().UnixMilli()
 	// Generate the verification URL.
-	return fmt.Sprintf("%s/api/authentication/index.html?session_id=%s&human_id=%s&callback_url=%s&ts=%d#/", h.config.BaseUrl, sessionId, humanId, callBackUrl, timeStamp), nil
+	return fmt.Sprintf("%s/authentication/index.html?session_id=%s&human_id=%s&callback_url=%s&ts=%d#/", h.config.BaseUrl, sessionId, humanId, callBackUrl, timeStamp), nil
 }
 
 // Verify verifies a verification code for a given session ID.

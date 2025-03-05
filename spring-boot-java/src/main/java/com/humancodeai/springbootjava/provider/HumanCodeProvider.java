@@ -85,7 +85,7 @@ public class HumanCodeProvider {
 
     public String genVerificationUrl(String sessionId, String humanId, String callBackUrl) {
         long timestamp = System.currentTimeMillis();
-        return String.format("%s/api/authentication/index.html?session_id=%s&human_id=%s&callback_url=%s&ts=%d#/",
+        return String.format("%s/authentication/index.html?session_id=%s&human_id=%s&callback_url=%s&ts=%d#/",
                 config.getBaseUrl(), sessionId, humanId, callBackUrl, timestamp);
     }
 

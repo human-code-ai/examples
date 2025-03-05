@@ -88,7 +88,7 @@ class HumanCodeProvider {
 
   genVerificationUrl(sessionId: string, humanId: string, callBackUrl: string): string {
     const timestamp = Date.now();
-    return `${this.config.baseUrl}/api/authentication/index.html?session_id=${sessionId}&human_id=${humanId}&callback_url=${callBackUrl}&ts=${timestamp}#/`;
+    return `${this.config.baseUrl}/authentication/index.html?session_id=${sessionId}&human_id=${humanId}&callback_url=${callBackUrl}&ts=${timestamp}#/`;
   }
 
   async verify(sessionId: string, vCode: string, nonceStr: string): Promise<VerifyResult> {
